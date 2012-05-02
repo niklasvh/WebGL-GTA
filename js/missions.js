@@ -62,6 +62,7 @@ GTA.parseINI = function ( data ) {
                 GTA.Error( "No map defined in MISSION.INI (compressed line " + i + ")" );
             } 
             defining = "objects";  
+            matched[1] = matched[1].toUpperCase();
             this.missions[ matched[1] ] = new GTA.Missions(); 
             currentMap = this.missions[ matched[1] ];
             //console.log(currentMap);
