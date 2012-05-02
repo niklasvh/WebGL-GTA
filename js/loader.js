@@ -44,7 +44,7 @@ GTA.loader = function ( file ) {
         GTA.parseCMP.call( this, new DataViewReader( data, true ) );
     });
      */
-    GTA.ajaxLoader.call(this, "data/MISSION.ini", function( data ) {
+    GTA.ajaxLoader.call(this, "data/MISSION.INI", function( data ) {
         GTA.parseINI.call( this, data );
         //   this.missions = new GTA.Missions();
         // this.missions.loadData( new DataViewReader( data, true ) );
