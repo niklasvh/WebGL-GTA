@@ -6,7 +6,7 @@ The game files used are from the original GTA game's demo from 1997, freely avai
 
 **Browser support & Issues**
 
-Currently only works on Google Chrome and requires a half decent graphics card. There are a number of graphical glitches present, such as problems with palette transparancy and some slopes applied with wrong angle. This implementation parses the game files as they were used in the original games, and as such they are far from an optimal format used in this experiment, and especially the sprites and color palettes require far more computing that would be necessary with a more optimal format.
+Currently only works on Google Chrome/Firefox and requires a half decent graphics card. There are a number of graphical glitches present, such as problems with palette transparancy and some slopes applied with wrong angle. This implementation parses the game files as they were used in the original games, and as such they are far from an optimal format used in this experiment, and especially the sprites and color palettes require far more computing that would be necessary with a more optimal format.
 
 **Future plans**
 
