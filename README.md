@@ -11,4 +11,5 @@ Currently only works on Google Chrome and requires a half decent graphics card. 
 **Future plans**
 
 I created this experiment just for the purpose of testing some aspects of WebGL and to see how well larger static environments perform and currently have no plans of continuing developing this any further in the near future. It currently parses most files used by the game (including maps, sprites, game objects, spawn points, missions, etc. ) but only uses a small portion of that data in its current implementation.
-    
+
+<a href="http://niklasvh.github.com/WebGL-GTA/">Try it</a>
