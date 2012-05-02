@@ -26,7 +26,7 @@ GTA.parseINI = function ( data ) {
     
     
     // remove blank lines     
-    data = data.replace(/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/g, "\n");
+    data = data.replace(/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/g, "\n").trim();
     
     var commands = data.split("\n"),
     mapStartRE = /^\[(\d*)\]$/,
@@ -59,7 +59,7 @@ GTA.parseINI = function ( data ) {
                 
                 GTA.Log( c )
                 
-                GTA.Error( "No map defined in MISSION.ini (compressed line " + i + ")" );
+                GTA.Error( "No map defined in MISSION.INI (compressed line " + i + ")" );
             } 
             defining = "objects";  
             this.missions[ matched[1] ] = new GTA.Missions(); 
