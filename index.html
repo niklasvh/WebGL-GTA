@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <!--
+    * @author Niklas von Hertzen <niklas at hertzen.com>
+    * @created 30.12.2011 
+    * @website http://hertzen.com
+    -->
+    <head>
+        <title>GTA in WebGL</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <script src="external/ThreeDebug.js"></script>
+        <script src="external/Stats.js"></script>
+        <script src="external/Box2dWeb-2.1.a.3.js"></script>
+
+
+
+        <script src="js/reader.js"></script>
+        <script src="js/core.js"></script>
+        <script src="js/debug.js"></script>
+        <script src="js/physics.js"></script>
+        <script src="js/map.js"></script>
+        <script src="js/worker.js"></script>
+        <script src="js/filesystem.js"></script>
+        <script src="js/loader.js"></script>
+        <script src="js/block.js"></script>
+        <script src="js/car.js"></script>
+        <script src="js/sprites.js"></script>
+        <script src="js/gameobject.js"></script>
+        <script src="js/person.js"></script>
+        <script src="js/player.js"></script>
+        <script src="js/missions.js"></script>
+        <script src="js/missioncommands.js"></script>
+        <script src="js/missionactions.js"></script>
+
+
+        <script>
+            function start(){
+                
+                var stats = new Stats();
+
+                // Align top-left
+                stats.domElement.style.position = 'absolute';
+                stats.domElement.style.left = '0px';
+                stats.domElement.style.top = '0px';
+
+                document.body.appendChild( stats.domElement );
+
+                setInterval( function () {
+
+                    stats.update();
+
+                }, 1000 / 60 );
+                
+                
+                var game = new GTA.Game();
+            }
+            
+        </script>
+        <style>
+            body, html {
+                overflow:hidden;
+                margin:0;
+                padding:0;
+                background:#000;
+            }
+
+            #GTADebugPositionData {
+
+
+
+
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                width: 200px;
+                height: 50px;
+                opacity: 0.5;
+                color: #fff;
+                background: #000;
+
+            }
+
+        </style>
+    </head>
+    <body onload="start();"></body>
+</html>
