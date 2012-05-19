@@ -340,7 +340,8 @@ sides = {
     var sideIndex = [ 0, 1, 2, 3 ];
     if ( cube.faces.length > 1 ) {
         
-        sideIndex = [ cube.faces[1].a, cube.faces[1].d, cube.faces[1].b, cube.faces[1].c ];
+        var faceIndex = cube.faces.length - 1;
+        sideIndex = [ cube.faces[ faceIndex ].a, cube.faces[ faceIndex ].d, cube.faces[ faceIndex ].b, cube.faces[ faceIndex ].c ];
 
     }
     
