@@ -410,6 +410,16 @@ sides = {
         case 4:
             buildSlope( (this.slope - 4), 32, cube.vertices, [ 0, 0, 1, 1 ] );
             break;
+           
+        case 5:
+        case 6:
+            buildSlope( (this.slope - 6), 32, cube.vertices, [ 1, 0, 1, 0 ] );
+            break;
+           
+        case 7:
+        case 8:
+            buildSlope( (this.slope - 8), 32, cube.vertices, [ 0, 1, 0, 1 ] );
+            break;
         
         
         case  9:
@@ -453,6 +463,21 @@ sides = {
         case  32:
             
             buildSlope( (this.slope - 25) - 4, 8, cube.vertices, [ 1, 0, 1, 0 ] );
+
+            break;
+            
+            
+                         
+        case  33:
+        case  34:
+        case  35:
+        case  36:
+        case  37:
+        case  38:
+        case  39:
+        case  40:
+            
+            buildSlope( (this.slope - 33) - 4, 8, cube.vertices, [ 0, 1, 0, 1 ] );
 
             break;
         
