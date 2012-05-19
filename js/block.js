@@ -337,12 +337,12 @@ sides = {
         
     }
     
-    var sideIndex = [
-    4 * sides.px + sides.nx,
-    1 + (sides.nx * 3) - sides.px,
-    2 + (sides.px * 3) + sides.nx,
-    3 + sides.nx * 2 - sides.px
-    ];
+    var sideIndex = [ 0, 1, 2, 3 ];
+    if ( cube.faces.length > 1 ) {
+        
+        sideIndex = [ cube.faces[1].a, cube.faces[1].d, cube.faces[1].b, cube.faces[1].c ];
+
+    }
     
     function buildSlope ( start, angle, vertices, direction ) {
         
