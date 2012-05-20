@@ -44,6 +44,13 @@ GTA.loader = function ( file ) {
         GTA.parseCMP.call( this, new DataViewReader( data, true ) );
     });
      */
+    /*
+    GTA.ajaxLoader.call(this, "data/F_PLAY1.RAW", function(data) {
+        var c = RAWLoader.load( new Uint8Array(data), 102, 141, 3, true );
+        document.body.appendChild(c);
+    });
+    */
+    
     GTA.ajaxLoader.call(this, "data/MISSION.INI", function( data ) {
         GTA.parseINI.call( this, data );
         //   this.missions = new GTA.Missions();
@@ -543,7 +550,7 @@ GTA.parseCMP = function ( data ) {
                         
                     }
         
-                   // this.player.position.z += 64;
+                    // this.player.position.z += 64;
                     game.scene.add( game.player );
                     
                     
