@@ -278,7 +278,8 @@ sides = {
     //this.flipY = false;
     //this.flipX = false;
     
-    var copyFrom = cube.faces.length - 2;
+    var copyFrom = sides.px + sides.nx;
+    var copyTo = sides.px + sides.nx + sides.py;
     
   
    
@@ -288,10 +289,10 @@ sides = {
             
             // move bottom to top
             
-            cube.faces[ copyFrom + 1 ].a = cube.faces[ copyFrom ].b;
-            cube.faces[ copyFrom + 1 ].b = cube.faces[ copyFrom ].a;
-            cube.faces[ copyFrom + 1 ].c = cube.faces[ copyFrom ].d;
-            cube.faces[ copyFrom + 1 ].d = cube.faces[ copyFrom ].c;
+            cube.faces[ copyTo ].a = cube.faces[ copyFrom ].b;
+            cube.faces[ copyTo ].b = cube.faces[ copyFrom ].a;
+            cube.faces[ copyTo ].c = cube.faces[ copyFrom ].d;
+            cube.faces[ copyTo ].d = cube.faces[ copyFrom ].c;
         /*
             
         // if (cube.faces.length === 4){
