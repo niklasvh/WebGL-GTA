@@ -167,8 +167,8 @@ GTA.Pedestrian.prototype.update = function ( delta ) {
         
         movementSpeed = 2; // running
     } else if ( this.moveBackward  ) {
-        this.movePedestrian (  ( (speed/2) * Math.cos(this.sprite.rotation.z + 1.57079633) ) , ( (speed/2) * Math.sin(this.sprite.rotation.z + 1.57079633) ), 0 );
-        
+        var physicsSpeed = 1;
+        this.physics.SetLinearVelocity( new Box2D.Common.Math.b2Vec2(   ( -speed * Math.cos(this.physics.GetAngle()) ) ,   ( -speed * Math.sin(this.physics.GetAngle()) ) ) );
         movementSpeed = 1; // walking
     } else  {
         this.physics.SetLinearVelocity( new Box2D.Common.Math.b2Vec2(  0 ,  0 ) );
